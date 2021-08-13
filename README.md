@@ -1,29 +1,42 @@
-# GosseynPalindrome
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gosseyn__palindrome`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Palindrome detector
 
-TODO: Delete this and the text above, and describe your gem
+`gosseyn__palindrome` is a sample Ruby gem created in [*Learn Enough Ruby to Be Dangerous*](https://www.learnenough.com/ruby-tutorial) by Michael Hartl.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+
+To install `gosseyn__palindrome` add this line to your application `Gemfile` :
 
 ```ruby
 gem 'gosseyn__palindrome'
 ```
 
 And then execute:
-
+```
     $ bundle install
-
+```
 Or install it yourself as:
-
+```
     $ gem install gosseyn__palindrome
+```
 
 ## Usage
 
-TODO: Write usage instructions here
-
+`gosseyn__palindrome` ajoute une méthode  `palindrome?` à la classe `String` et peut être utilisé comme suit :
+```
+$ irb
+>> require 'gosseyn__palindrome'
+>> "honey badger".palindrome?
+=> false
+>> "deified".palindrome?
+=> true
+>> "Able was I, ere I saw Elba.".palindrome?
+=> true
+>> phrase = "Madam, I'm Adam."
+>> phrase.palindrome?
+=> true
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -32,4 +45,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gosseyn__palindrome.
+Bug reports and pull requests are welcome on GitHub at https://github.com/gosseyn/gosseyn__palindrome.
