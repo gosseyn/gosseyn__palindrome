@@ -2,7 +2,20 @@
 
 require_relative "gosseyn__palindrome/version"
 
-module GosseynPalindrome
-  class Error < StandardError; end
-  # Your code goes here...
+
+class String
+  
+  def palindrome?
+   processed_content == processed_content.reverse 
+  end
+
+ 
+  private
+
+    def processed_content
+      scan(/[[:alpha:]]/).join.downcase
+    end
+  
 end
+
+
