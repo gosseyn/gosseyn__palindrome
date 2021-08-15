@@ -26,5 +26,13 @@ class GosseynPalindromeTest < Minitest::Test
   def nonascii_palindrome
     assert "Par delà le drap.".palindrome?
   end
+
+  def test_integer_non_palindrome
+    refute 12345.palindrome?
+  end
+  
+  def test_integer_palindrome
+    assert 12321.palindrome?
+  end
   
 end

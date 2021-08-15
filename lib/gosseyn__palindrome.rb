@@ -3,19 +3,32 @@
 require_relative "gosseyn__palindrome/version"
 
 
-class String
-  
+module GosseynPalindrome
+
+ # Retourne true pour un palindrome, faux autrement
   def palindrome?
-   processed_content == processed_content.reverse 
+    if processed_content.empty?
+      false
+    else
+      processed_content == processed_content.reverse
+    end
   end
 
  
   private
 
+    # Retourne le contenu pour le test palindrome
     def processed_content
-      scan(/[[:alpha:]]/).join.downcase
+      # to_s.scan(/[a-z\d]/i).join.downcase
+       to_s.scan(/[[:alnum:]]/).join.downcase
     end
   
 end
 
+class String
+  include GosseynPalindrome
+end
 
+class Integer
+  include GosseynPalindrome 
+end
